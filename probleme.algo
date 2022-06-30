@@ -1,0 +1,26 @@
+FUNCTION dot_Product(arr1,arr2:Array_Of Integer[]) : Integer
+VAR
+    sum:Integer:=0;
+    i:Integer;
+BEGIN
+    For i from 0 to arr1.length-1 Step 1 do 
+    s:=s+arr1[i]*arr2[i];
+    END_FOR
+    RETURN sum;
+
+END
+
+ALGORITHM produit_scalaire
+VAR
+    arr1: ARRAY_OF INTEGER[50];
+    arr2: ARRAY_OF INTEGER[50];
+    sum:INTEGER;
+BEGIN
+    sum:=vect_Sum(arr1,arr2);
+    IF (sum=0) THEN
+        write("Ces 2 vecteurs sont orthogonaux ");
+    ELSE
+        write("Ces 2 vecteurs ne sont pas orthogonaux ");
+    END_IF
+
+END

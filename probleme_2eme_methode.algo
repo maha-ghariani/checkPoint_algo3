@@ -1,0 +1,23 @@
+PROCEDURE dot_Product(arr1,arr2:Array_Of Integer[]; var p:Integer)
+VAR
+    i:Integer;
+BEGIN
+    p:=0;
+    FOR i FROM 0 TO arr1.length-1 STEP 1 DO
+    p:=p+arr1[i]*arr2[i];
+    END_FOR
+END
+
+ALGORITHM produit_scalaire
+VAR
+    arr1: ARRAY_OF INTEGER[50];
+    arr2: ARRAY_OF INTEGER[50];
+    sum:INTEGER;
+BEGIN
+    dot_Product(arr1,arr2,sum);
+    IF (sum=0) THEN
+        write("Ces 2 vecteurs sont orthogonaux ");
+    ELSE
+        write("Ces 2 vecteurs ne sont pas orthogonaux ");
+    END_IF
+END
